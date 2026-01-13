@@ -5,8 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Process from './components/Process';
 import Collections from './components/Collections';
-import Gallery from './components/Gallery';
-
+import Lookbook from './components/Lookbook';
 import AppointmentForm from './components/AppointmentForm';
 import Footer from './components/Footer';
 
@@ -22,7 +21,7 @@ const App: React.FC = () => {
 
     // Initial check for system preference
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // setIsDarkMode(true); // Default to light as per brand essence, but option is there
+      // setIsDarkMode(true); 
     }
 
     return () => window.removeEventListener('scroll', handleScroll);
@@ -37,7 +36,7 @@ const App: React.FC = () => {
     <div className={`min-h-screen selection:bg-gold/30 selection:text-gold-dark transition-colors duration-500`}>
       <Header scrolled={scrolled} isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
 
-      <main className="overflow-x-hidden">
+      <main className="w-full">
         <section id="home">
           <Hero />
         </section>
@@ -50,15 +49,11 @@ const App: React.FC = () => {
           <Collections />
         </section>
 
-        <section id="process" className="py-24 bg-white dark:bg-stone-900 transition-colors">
+        <section id="process" className="py-24 bg-stone-50 dark:bg-stone-950 transition-colors">
           <Process />
         </section>
 
-        <section id="gallery" className="py-24 bg-[#FAF9F6] dark:bg-stone-950 transition-colors">
-          <Gallery />
-        </section>
-
-
+        <Lookbook />
 
         <section id="appointment" className="py-24 bg-[#FDF2F2] dark:bg-stone-950/50 transition-colors">
           <AppointmentForm />

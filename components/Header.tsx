@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled, isDarkMode, toggleTheme }) =>
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 dark:bg-stone-900/95 backdrop-blur-md shadow-md py-2' : 'bg-gradient-to-b from-stone-900/60 to-transparent py-4'}`}>
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 items-center h-28 md:h-40">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 items-center h-20 md:h-28">
 
         {/* Left: Navigation (Desktop) / Menu (Mobile) */}
         <div className="flex justify-start items-center">
@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled, isDarkMode, toggleTheme }) =>
             <img
               src="/images/logo.png"
               alt="Desi Diva"
-              className={`w-auto transition-all duration-500 ${scrolled ? 'h-24 md:h-32' : 'h-28 md:h-48 drop-shadow-lg'}`}
+              className={`w-auto transition-all duration-500 ${scrolled ? 'h-16 md:h-24' : 'h-20 md:h-32 drop-shadow-lg'}`}
             />
           </a>
         </div>
