@@ -15,7 +15,7 @@ const AppointmentForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
@@ -33,7 +33,7 @@ const AppointmentForm: React.FC = () => {
         <p className="text-stone-500 dark:text-stone-400 font-light mb-8 leading-relaxed">
           Thank you, <span className="text-gold font-semibold">{formData.name}</span>. Sonia Gupta will personally reach out to you via phone or WhatsApp to confirm your bespoke session.
         </p>
-        <button 
+        <button
           onClick={() => setIsSuccess(false)}
           className="text-gold text-xs tracking-widest uppercase border-b border-gold hover:text-gold-dark transition-colors"
         >
@@ -52,9 +52,9 @@ const AppointmentForm: React.FC = () => {
             <p className="text-stone-500 dark:text-stone-400 font-light mb-8 leading-relaxed">
               Fill out the form to schedule your personalized design consultation with Sonia Gupta. We look forward to creating magic with you.
             </p>
-            
+
             <div className="space-y-6">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-stone-600 dark:text-stone-400 group">
+              <a href="https://instagram.com/desidivaboutique" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-stone-600 dark:text-stone-400 group">
                 <div className="w-10 h-10 rounded-full bg-white dark:bg-stone-700 border border-gold/20 flex items-center justify-center group-hover:bg-gold group-hover:text-white transition-all">
                   <Instagram size={18} />
                 </div>
@@ -68,7 +68,7 @@ const AppointmentForm: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="mt-12 pt-12 border-t border-stone-200 dark:border-stone-700">
             <p className="text-[10px] tracking-[0.3em] uppercase text-gold font-bold">The Studio</p>
             <address className="not-italic text-sm text-stone-600 dark:text-stone-400 font-light mt-2 leading-relaxed">

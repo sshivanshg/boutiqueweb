@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
               Crafting timeless elegance for the modern woman. Every outfit is a masterpiece of tradition and luxury, designed exclusively for you by Sonia Gupta.
             </p>
             <div className="flex space-x-6">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors"><Instagram size={20} /></a>
+              <a href="https://instagram.com/desidivaboutique" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors"><Instagram size={20} /></a>
               <a href="#" className="hover:text-[#D4AF37] transition-colors"><Facebook size={20} /></a>
               <a href="https://wa.me/918840972081" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors"><MessageCircle size={20} /></a>
             </div>
@@ -35,9 +35,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-6 text-sm text-stone-400 font-light">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-[#D4AF37] mt-0.5 shrink-0" />
-                <a 
-                  href="https://maps.app.goo.gl/oHVCXeoWwnRr8JCaA" 
-                  target="_blank" 
+                <a
+                  href="https://maps.app.goo.gl/oHVCXeoWwnRr8JCaA"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >

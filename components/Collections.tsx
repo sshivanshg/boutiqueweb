@@ -12,25 +12,25 @@ interface Category {
 const collectionCategories: Category[] = [
   {
     title: "Bridal Wear",
-    image: "https://images.unsplash.com/photo-1594144408221-5079815797f1?auto=format&fit=crop&q=80&w=1000",
+    image: "/images/img-2.jpg",
     tagline: "The Wedding Dream",
     details: "Our bridal collections feature bespoke lehengas and shararas, intricately hand-embroidered with zardosi and sequins. Each piece is custom-tailored to the bride's story."
   },
   {
     title: "Festive Glamour",
-    image: "https://images.unsplash.com/photo-1610030469614-f584e03d366a?auto=format&fit=crop&q=80&w=1000",
+    image: "/images/img-3.jpg",
     tagline: "Celebrate in Style",
     details: "Elegant anarkalis and fusion drapes designed for the vibrant festivities of the subcontinent. Lightweight yet luxurious fabrics for effortless grace."
   },
   {
     title: "Custom Blouses",
-    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&q=80&w=1000",
+    image: "/images/img-4.jpg",
     tagline: "Intricate Artistry",
     details: "The centerpiece of saree styling. From backless wonders to structured masterpieces, our custom blouses are designed to complement your silhouette."
   },
   {
     title: "Indo-Western",
-    image: "https://images.unsplash.com/photo-1591129841117-3adfd313e34f?auto=format&fit=crop&q=80&w=1000",
+    image: "/images/img-5.jpg",
     tagline: "Modern Fusion",
     details: "A blend of traditional textiles and modern silhouettes. Think cape-style jackets, cigarette pants with drapes, and structured luxury for the global diva."
   }
@@ -53,8 +53,8 @@ const Collections: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {collectionCategories.map((item, idx) => (
-          <div 
-            key={idx} 
+          <div
+            key={idx}
             onClick={() => setSelectedCategory(item)}
             className="group relative cursor-pointer overflow-hidden rounded-sm shadow-xl aspect-[3/4]"
           >
@@ -82,7 +82,7 @@ const Collections: React.FC = () => {
       {selectedCategory && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-stone-900/90 backdrop-blur-sm animate-in fade-in duration-300">
           <div className="bg-white dark:bg-stone-900 w-full max-w-4xl rounded-sm overflow-hidden flex flex-col md:flex-row relative shadow-2xl">
-            <button 
+            <button
               onClick={() => setSelectedCategory(null)}
               className="absolute top-4 right-4 z-10 p-2 bg-white/20 hover:bg-white/40 dark:hover:bg-stone-800 transition-colors rounded-full text-white md:text-stone-800 dark:md:text-white"
             >
@@ -97,8 +97,8 @@ const Collections: React.FC = () => {
               <p className="text-stone-500 dark:text-stone-400 font-light leading-relaxed mb-8">
                 {selectedCategory.details}
               </p>
-              <a 
-                href="#appointment" 
+              <a
+                href="#appointment"
                 onClick={() => setSelectedCategory(null)}
                 className="inline-block py-4 px-8 bg-stone-900 dark:bg-gold text-white tracking-widest uppercase text-xs text-center transition-colors hover:bg-gold dark:hover:bg-gold-dark"
               >

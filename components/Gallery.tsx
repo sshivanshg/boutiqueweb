@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 
 const galleryImages = [
-  "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1583391733975-64263b552113?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1621285853634-713b8dd6b5ee?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1620913072395-032219583d2c?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=800",
+  "/images/img-1.jpg",
+  "/images/img-2.jpg",
+  "/images/img-3.jpg",
+  "/images/img-4.jpg",
+  "/images/img-5.jpg",
+  "/images/img-6.jpg",
 ];
 
 const Gallery: React.FC = () => {
@@ -32,8 +32,8 @@ const Gallery: React.FC = () => {
 
       <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
         {galleryImages.map((src, idx) => (
-          <div 
-            key={idx} 
+          <div
+            key={idx}
             onClick={() => setLightboxIndex(idx)}
             className="relative group overflow-hidden rounded-sm shadow-md cursor-zoom-in"
           >
@@ -52,26 +52,26 @@ const Gallery: React.FC = () => {
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <div className="fixed inset-0 z-[110] bg-black/95 flex items-center justify-center p-4 animate-in fade-in zoom-in-95 duration-300">
-          <button 
+          <button
             onClick={() => setLightboxIndex(null)}
             className="absolute top-8 right-8 text-white/60 hover:text-white transition-colors z-[120]"
           >
             <X size={32} />
           </button>
-          
+
           <button onClick={prevImage} className="absolute left-4 md:left-8 text-white/40 hover:text-white transition-colors z-[120]">
             <ChevronLeft size={48} />
           </button>
-          
+
           <div className="relative max-w-4xl max-h-[85vh] w-full flex items-center justify-center">
-             <img 
-               src={galleryImages[lightboxIndex]} 
-               className="max-w-full max-h-[85vh] object-contain shadow-2xl border-4 border-stone-800"
-               alt="Full Look"
-             />
-             <div className="absolute bottom-[-40px] left-0 w-full text-center text-white/60 text-xs tracking-[0.3em] uppercase">
-               Item {lightboxIndex + 1} of {galleryImages.length}
-             </div>
+            <img
+              src={galleryImages[lightboxIndex]}
+              className="max-w-full max-h-[85vh] object-contain shadow-2xl border-4 border-stone-800"
+              alt="Full Look"
+            />
+            <div className="absolute bottom-[-40px] left-0 w-full text-center text-white/60 text-xs tracking-[0.3em] uppercase">
+              Item {lightboxIndex + 1} of {galleryImages.length}
+            </div>
           </div>
 
           <button onClick={nextImage} className="absolute right-4 md:right-8 text-white/40 hover:text-white transition-colors z-[120]">

@@ -6,7 +6,7 @@ import About from './components/About';
 import Process from './components/Process';
 import Collections from './components/Collections';
 import Gallery from './components/Gallery';
-import Testimonials from './components/Testimonials';
+
 import AppointmentForm from './components/AppointmentForm';
 import Footer from './components/Footer';
 
@@ -36,12 +36,12 @@ const App: React.FC = () => {
   return (
     <div className={`min-h-screen selection:bg-gold/30 selection:text-gold-dark transition-colors duration-500`}>
       <Header scrolled={scrolled} isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-      
+
       <main className="overflow-x-hidden">
         <section id="home">
           <Hero />
         </section>
-        
+
         <section id="about" className="py-24 bg-white dark:bg-stone-900 transition-colors">
           <About />
         </section>
@@ -58,15 +58,13 @@ const App: React.FC = () => {
           <Gallery />
         </section>
 
-        <section id="testimonials" className="py-24 bg-white dark:bg-stone-900 transition-colors">
-          <Testimonials />
-        </section>
+
 
         <section id="appointment" className="py-24 bg-[#FDF2F2] dark:bg-stone-950/50 transition-colors">
           <AppointmentForm />
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
