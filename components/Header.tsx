@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled, isDarkMode, toggleTheme }) =>
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <div className={`hidden md:flex items-center space-x-6 lg:space-x-8 transition-all duration-500 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
             {navLinks.slice(0, 3).map((link) => (
               <a
                 key={link.name}
@@ -71,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled, isDarkMode, toggleTheme }) =>
                 Plan says "Left: Navigation Links". I will stick to the plan but maybe adds to "Right" if it looks empty?
                 No, clean Actions on right is modern.
             */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 mr-4">
+          <div className={`hidden md:flex items-center space-x-6 lg:space-x-8 mr-4 transition-all duration-500 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
             {navLinks.slice(3).map((link) => (
               <a
                 key={link.name}
