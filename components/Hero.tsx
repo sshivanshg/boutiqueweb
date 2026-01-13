@@ -7,9 +7,9 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/img-1.jpg"
+          src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&q=80&w=2000"
           alt="Luxury Indian Ethnic Wear"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/60 to-transparent"></div>
       </div>
