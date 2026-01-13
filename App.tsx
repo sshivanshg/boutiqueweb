@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +19,8 @@ const App: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll);
 
-    // Initial check for system preference
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // setIsDarkMode(true); 
-    }
+    // Set initial dark mode class
+    document.documentElement.classList.add('dark');
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
