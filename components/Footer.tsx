@@ -7,19 +7,19 @@ const Footer: React.FC = () => {
     <footer className="bg-stone-900 text-white pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-20">
-          <div className="md:col-span-2">
-            <h2 className="font-serif text-3xl tracking-widest mb-6">DESI DIVA</h2>
-            <p className="text-stone-400 font-light max-w-sm leading-relaxed mb-8">
+          <div className="md:col-span-4 flex flex-col items-center mb-12">
+            <img src="/images/logo.png" alt="Desi Diva" className="h-40 w-auto mb-6 opacity-90" />
+            <p className="text-stone-400 font-light max-w-lg text-center leading-relaxed">
               Crafting timeless elegance for the modern woman. Every outfit is a masterpiece of tradition and luxury, designed exclusively for you by Sonia Gupta.
             </p>
-            <div className="flex space-x-6">
-              <a href="https://instagram.com/desidivaboutique" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-[#D4AF37] transition-colors"><Facebook size={20} /></a>
-              <a href="https://wa.me/918840972081" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors"><MessageCircle size={20} /></a>
+            <div className="flex space-x-6 mt-8">
+              <a href="https://instagram.com/desidivaboutique" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors"><Instagram size={24} /></a>
+              <a href="#" className="hover:text-[#D4AF37] transition-colors"><Facebook size={24} /></a>
+              <a href="https://wa.me/918840972081" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors"><MessageCircle size={24} /></a>
             </div>
           </div>
 
-          <div>
+          <div className="md:col-start-2 md:col-span-1">
             <h4 className="text-xs tracking-[0.3em] uppercase font-bold text-[#D4AF37] mb-8">Quick Links</h4>
             <ul className="space-y-4 text-sm text-stone-400 font-light">
               <li><a href="#about" className="hover:text-white transition-colors">Our Story</a></li>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="md:col-start-3 md:col-span-1">
             <h4 className="text-xs tracking-[0.3em] uppercase font-bold text-[#D4AF37] mb-8">Visit Us</h4>
             <ul className="space-y-6 text-sm text-stone-400 font-light">
               <li className="flex items-start space-x-3">
