@@ -38,7 +38,7 @@ const Lookbook = () => {
 };
 
 const StickyCard_003 = ({ imgUrl }: { imgUrl: string }) => {
-    const vertMargin = 10;
+    const vertMargin = 20; // Increased margin to reduce height (100 - 40 = 60vh)
     const container = useRef(null);
     const [maxScrollY, setMaxScrollY] = useState(Infinity);
 
@@ -74,7 +74,7 @@ const StickyCard_003 = ({ imgUrl }: { imgUrl: string }) => {
     return (
         <motion.div
             ref={container}
-            className="rounded-[2rem] sticky h-[200px] w-full max-w-4xl overflow-hidden bg-neutral-200 shadow-2xl"
+            className="rounded-[2rem] sticky h-[200px] w-full max-w-2xl overflow-hidden bg-neutral-200 shadow-2xl"
             style={{
                 scale: scale,
                 rotate: filter,
